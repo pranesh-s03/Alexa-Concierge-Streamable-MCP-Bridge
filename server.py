@@ -68,7 +68,7 @@ INDEX_HTML = """
         const res = await fetch('/mcp/call', {
           method: 'POST',
           headers: {'Content-Type': 'application/json'},
-          body: json.stringify({name: toolName, arguments: args})
+          body: JSON.stringify({name: toolName, arguments: args})
         });
         const data = await res.json();
         term.innerHTML += `<div style="color:#4ade80;">[mcp response] ${JSON.stringify(data.result)}</div>`;
